@@ -21,9 +21,15 @@ Server=::1,1433;User Id=SA;Password=SqlServer2019!;Database=master;
 Para a maioria dos cenários, bastará adicionar ao diretório "Scripts" os scripts (arquivos .sql) que você deseja que sejam executados na criação do banco (Create tables, cargas iniciais etc.).  
 Em seguida, executar via PowerShell os 2 arquivos: 
 
-```powershell
+```console
 .\create-sqlserver.ps1
-.\apply-sqlserver.ps1
+.\apply-scripts.ps1
+```
+
+Se quiser destruir o container, basta executar: 
+
+```console
+.\destroy-sqlserver
 ```
 
 Caso queria alterar alguma configuração, basta alterar os arquivos conforme a sua necessidade.  
@@ -36,7 +42,7 @@ Arquivo responsável por criar o container SqlServer 2019 que está configurado 
 O nome que é usado no docker é local-sqlserver. Caso queira trocar, lembre-se de alterar também no arquivo destroy-sqlserver.ps1.  
 Exemplo:  
 
-```text
+```console
 docker compose -f .\dockercompose-sqlserver.yml -p nome-que-voce-preferir up -d
 ```
 
