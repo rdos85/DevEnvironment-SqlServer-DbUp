@@ -1,0 +1,8 @@
+dbUp:
+  version: 1
+  provider: sqlserver
+  connectionString: Server=::1,1433;User Id=SA;Password=SqlServer2019!;Database=master;
+  connectionTimeoutSec: 30
+  transaction: PerScript
+  scripts:
+    - folder: Scripts

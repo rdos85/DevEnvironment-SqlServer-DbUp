@@ -1,0 +1,1 @@
+docker compose -f .\dockercompose-sqlserver.yml -p local-sqlserver up -d
