@@ -66,10 +66,3 @@ Password: SqlServer2019!
 ### dbup.yml
 
 Arquivo de configurações usado pelo DbUp. Contém a connection string que é usada para acessar o banco e o diretório onde estão os scripts.  
-Caso queira substituir o nome do Database, basta alterar a connection string para: 
-
-```
-...
-connectionString: Server=::1,1433;User Id=SA;Password=SqlServer2019!;Database=MY_DATABASE_NAME;
-...
-```

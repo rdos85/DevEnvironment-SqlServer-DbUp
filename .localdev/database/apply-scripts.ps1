@@ -5,4 +5,4 @@ else {
 	dotnet tool install --global dbup-cli
 }
 
-dbup upgrade dbup.yml
+dbup upgrade dbup.yml --ensure
